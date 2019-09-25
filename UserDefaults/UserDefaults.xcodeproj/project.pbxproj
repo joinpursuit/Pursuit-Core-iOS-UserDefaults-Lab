@@ -19,7 +19,6 @@
 		287E4146233AF82600C2A26D /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E4145233AF82600C2A26D /* AppError.swift */; };
 		287E4148233AF87000C2A26D /* HoroscopeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E4147233AF87000C2A26D /* HoroscopeAPIClient.swift */; };
 		287E414A233AFD5300C2A26D /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E4149233AFD5300C2A26D /* DateExtention.swift */; };
-		287E414C233AFD9100C2A26D /* GetHoroscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E414B233AFD9100C2A26D /* GetHoroscope.swift */; };
 		287E414E233AFEC800C2A26D /* HoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E414D233AFEC800C2A26D /* HoroscopeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +49,6 @@
 		287E4145233AF82600C2A26D /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		287E4147233AF87000C2A26D /* HoroscopeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeAPIClient.swift; sourceTree = "<group>"; };
 		287E4149233AFD5300C2A26D /* DateExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtention.swift; sourceTree = "<group>"; };
-		287E414B233AFD9100C2A26D /* GetHoroscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHoroscope.swift; sourceTree = "<group>"; };
 		287E414D233AFEC800C2A26D /* HoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,16 +92,11 @@
 			isa = PBXGroup;
 			children = (
 				287E411F233A9F9300C2A26D /* AppDelegate.swift */,
-				287E4121233A9F9300C2A26D /* ViewController.swift */,
-				287E414D233AFEC800C2A26D /* HoroscopeViewController.swift */,
+				287E414F233B207F00C2A26D /* ViewController */,
 				287E4123233A9F9300C2A26D /* Main.storyboard */,
-				287E4141233AABCD00C2A26D /* Horoscope.swift */,
-				287E413F233AA71400C2A26D /* UserDefaults.swift */,
-				287E4143233AF7B000C2A26D /* NetworkHelper.swift */,
-				287E4147233AF87000C2A26D /* HoroscopeAPIClient.swift */,
-				287E4145233AF82600C2A26D /* AppError.swift */,
-				287E4149233AFD5300C2A26D /* DateExtention.swift */,
-				287E414B233AFD9100C2A26D /* GetHoroscope.swift */,
+				287E4150233B209400C2A26D /* Models */,
+				287E4151233B20A100C2A26D /* NetworkManagers */,
+				287E4152233B20B600C2A26D /* Extention */,
 				287E4126233A9F9500C2A26D /* Assets.xcassets */,
 				287E4128233A9F9500C2A26D /* LaunchScreen.storyboard */,
 				287E412B233A9F9500C2A26D /* Info.plist */,
@@ -118,6 +111,42 @@
 				287E4136233A9F9500C2A26D /* Info.plist */,
 			);
 			path = UserDefaultsTests;
+			sourceTree = "<group>";
+		};
+		287E414F233B207F00C2A26D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				287E4121233A9F9300C2A26D /* ViewController.swift */,
+				287E414D233AFEC800C2A26D /* HoroscopeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		287E4150233B209400C2A26D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				287E4141233AABCD00C2A26D /* Horoscope.swift */,
+				287E413F233AA71400C2A26D /* UserDefaults.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		287E4151233B20A100C2A26D /* NetworkManagers */ = {
+			isa = PBXGroup;
+			children = (
+				287E4143233AF7B000C2A26D /* NetworkHelper.swift */,
+				287E4147233AF87000C2A26D /* HoroscopeAPIClient.swift */,
+				287E4145233AF82600C2A26D /* AppError.swift */,
+			);
+			path = NetworkManagers;
+			sourceTree = "<group>";
+		};
+		287E4152233B20B600C2A26D /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				287E4149233AFD5300C2A26D /* DateExtention.swift */,
+			);
+			path = Extention;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,7 +256,6 @@
 				287E414E233AFEC800C2A26D /* HoroscopeViewController.swift in Sources */,
 				287E4122233A9F9300C2A26D /* ViewController.swift in Sources */,
 				287E4146233AF82600C2A26D /* AppError.swift in Sources */,
-				287E414C233AFD9100C2A26D /* GetHoroscope.swift in Sources */,
 				287E4144233AF7B000C2A26D /* NetworkHelper.swift in Sources */,
 				287E4120233A9F9300C2A26D /* AppDelegate.swift in Sources */,
 				287E4140233AA71400C2A26D /* UserDefaults.swift in Sources */,
