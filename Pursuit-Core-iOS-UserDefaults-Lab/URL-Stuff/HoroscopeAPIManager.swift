@@ -12,7 +12,7 @@ class HoroscopeAPIManager {
     private init(){}
     static let shared = HoroscopeAPIManager()
     
-    func getHoroscopes(showSign: String, completionHandler: @escaping (Result<[Horoscope], AppError>) -> Void){
+    func getHoroscopes(showSign: String, completionHandler: @escaping (Result<Horoscope, AppError>) -> Void){
         
         let urlStr = "http://sandipbgt.com/theastrologer/api/horoscope/\(showSign)/today "
         
@@ -26,7 +26,7 @@ class HoroscopeAPIManager {
                 completionHandler(.failure(error))
             case .success(let data):
                 do {
-                    let horoscopeInfo = try JSONDecoder().decode([Horoscope].self, from: data)
+                    let horoscopeInfo = try JSONDecoder().decode(Horoscope.self, from: data)
                     completionHandler(.success(horoscopeInfo))
                 } catch {
                     completionHandler(.failure(.couldNotParseJSON(rawError: error)))

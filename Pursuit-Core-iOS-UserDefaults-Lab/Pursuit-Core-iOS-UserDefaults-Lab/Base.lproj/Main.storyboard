@@ -10,20 +10,29 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--User Defaults View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pursuit_Core_iOS_UserDefaults_Lab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="UserDefaultsViewController" customModule="Pursuit_Core_iOS_UserDefaults_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xL2-Kk-b6x">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xL2-Kk-b6x">
                                 <rect key="frame" x="-5" y="244" width="414" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="591051912.25348794">
                                     <!--2019-09-24 21:05:12 +0000-->
                                 </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-3187256400">
+                                    <!--1900-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="568033200">
+                                    <!--2019-01-01 11:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="BirthdatePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="t7q-Qr-9Yd"/>
+                                </connections>
                             </datePicker>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7P0-iC-5Jf">
                                 <rect key="frame" x="0.0" y="542" width="414" height="162"/>
@@ -49,6 +58,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="UserName:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="kWn-Ad-nyK"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRa-e9-iRN">
                                 <rect key="frame" x="169" y="761" width="77" height="46"/>
@@ -60,15 +72,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="OoI-av-moN"/>
+                    <connections>
+                        <outlet property="AstrologyPicker" destination="7P0-iC-5Jf" id="xda-gm-e0b"/>
+                        <outlet property="BirthdatePicker" destination="xL2-Kk-b6x" id="UPv-NY-6JC"/>
+                        <outlet property="NameLabel" destination="zD5-GZ-4lq" id="vBb-49-a1i"/>
+                        <outlet property="welcomeLabel" destination="1kz-Wv-Xqt" id="gfd-g8-Bie"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1182.608695652174" y="762.72321428571422"/>
         </scene>
-        <!--View Controller-->
+        <!--Horoscope View Controller-->
         <scene sceneID="h2W-Ma-HlZ">
             <objects>
-                <viewController id="0b6-YK-tsA" sceneMemberID="viewController">
+                <viewController id="0b6-YK-tsA" customClass="HoroscopeViewController" customModule="Pursuit_Core_iOS_UserDefaults_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wnf-zT-I70">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,6 +110,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gXd-cC-O48"/>
                     </view>
+                    <connections>
+                        <outlet property="HoroscopeTextView" destination="ltU-e1-Ire" id="5iZ-SZ-qON"/>
+                        <outlet property="sunSignLabel" destination="PlK-NM-cef" id="VB7-FM-Iam"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MhR-D9-W7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

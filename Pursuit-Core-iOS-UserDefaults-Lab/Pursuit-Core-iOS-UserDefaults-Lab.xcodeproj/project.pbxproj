@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0BBA2125233ABA4600810283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA2124233ABA4600810283 /* AppDelegate.swift */; };
-		0BBA2127233ABA4600810283 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA2126233ABA4600810283 /* ViewController.swift */; };
 		0BBA212A233ABA4600810283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BBA2128233ABA4600810283 /* Main.storyboard */; };
 		0BBA212C233ABA4800810283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BBA212B233ABA4800810283 /* Assets.xcassets */; };
 		0BBA212F233ABA4800810283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BBA212D233ABA4800810283 /* LaunchScreen.storyboard */; };
@@ -18,6 +17,8 @@
 		0BBA2149233BA3C800810283 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA2148233BA3C800810283 /* NetworkHelper.swift */; };
 		0BBA214B233BA3E400810283 /* HoroscopeAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA214A233BA3E400810283 /* HoroscopeAPIManager.swift */; };
 		0BBA214D233BA40700810283 /* HoroscopeWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA214C233BA40700810283 /* HoroscopeWrapper.swift */; };
+		0BBA214F233C11E600810283 /* UserDefaultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA214E233C11E600810283 /* UserDefaultsViewController.swift */; };
+		0BBA2151233C11FA00810283 /* HoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA2150233C11FA00810283 /* HoroscopeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +34,6 @@
 /* Begin PBXFileReference section */
 		0BBA2121233ABA4600810283 /* Pursuit-Core-iOS-UserDefaults-Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pursuit-Core-iOS-UserDefaults-Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BBA2124233ABA4600810283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0BBA2126233ABA4600810283 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0BBA2129233ABA4600810283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0BBA212B233ABA4800810283 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BBA212E233ABA4800810283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,6 +46,8 @@
 		0BBA2148233BA3C800810283 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		0BBA214A233BA3E400810283 /* HoroscopeAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeAPIManager.swift; sourceTree = "<group>"; };
 		0BBA214C233BA40700810283 /* HoroscopeWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeWrapper.swift; sourceTree = "<group>"; };
+		0BBA214E233C11E600810283 /* UserDefaultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserDefaultsViewController.swift; path = ../UserDefaultsViewController.swift; sourceTree = "<group>"; };
+		0BBA2150233C11FA00810283 /* HoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HoroscopeViewController.swift; path = ../HoroscopeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,8 @@
 		0BBA2118233ABA4600810283 = {
 			isa = PBXGroup;
 			children = (
+				0BBA2153233C181400810283 /* Model-Stuff */,
+				0BBA2152233C17F300810283 /* URL-Stuff */,
 				0BBA2123233ABA4600810283 /* Pursuit-Core-iOS-UserDefaults-Lab */,
 				0BBA2138233ABA4800810283 /* Pursuit-Core-iOS-UserDefaults-LabTests */,
 				0BBA2122233ABA4600810283 /* Products */,
@@ -87,14 +91,10 @@
 		0BBA2123233ABA4600810283 /* Pursuit-Core-iOS-UserDefaults-Lab */ = {
 			isa = PBXGroup;
 			children = (
+				0BBA214E233C11E600810283 /* UserDefaultsViewController.swift */,
+				0BBA2150233C11FA00810283 /* HoroscopeViewController.swift */,
 				0BBA2124233ABA4600810283 /* AppDelegate.swift */,
-				0BBA2126233ABA4600810283 /* ViewController.swift */,
 				0BBA2128233ABA4600810283 /* Main.storyboard */,
-				0BBA2144233ABC0D00810283 /* HoroscopeModel.swift */,
-				0BBA2146233BA3B700810283 /* AppError.swift */,
-				0BBA2148233BA3C800810283 /* NetworkHelper.swift */,
-				0BBA214A233BA3E400810283 /* HoroscopeAPIManager.swift */,
-				0BBA214C233BA40700810283 /* HoroscopeWrapper.swift */,
 				0BBA212B233ABA4800810283 /* Assets.xcassets */,
 				0BBA212D233ABA4800810283 /* LaunchScreen.storyboard */,
 				0BBA2130233ABA4800810283 /* Info.plist */,
@@ -109,6 +109,25 @@
 				0BBA213B233ABA4800810283 /* Info.plist */,
 			);
 			path = "Pursuit-Core-iOS-UserDefaults-LabTests";
+			sourceTree = "<group>";
+		};
+		0BBA2152233C17F300810283 /* URL-Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				0BBA214A233BA3E400810283 /* HoroscopeAPIManager.swift */,
+				0BBA2146233BA3B700810283 /* AppError.swift */,
+				0BBA2148233BA3C800810283 /* NetworkHelper.swift */,
+			);
+			path = "URL-Stuff";
+			sourceTree = "<group>";
+		};
+		0BBA2153233C181400810283 /* Model-Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				0BBA214C233BA40700810283 /* HoroscopeWrapper.swift */,
+				0BBA2144233ABC0D00810283 /* HoroscopeModel.swift */,
+			);
+			path = "Model-Stuff";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,8 +232,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BBA2147233BA3B700810283 /* AppError.swift in Sources */,
+				0BBA2151233C11FA00810283 /* HoroscopeViewController.swift in Sources */,
+				0BBA214F233C11E600810283 /* UserDefaultsViewController.swift in Sources */,
 				0BBA214D233BA40700810283 /* HoroscopeWrapper.swift in Sources */,
-				0BBA2127233ABA4600810283 /* ViewController.swift in Sources */,
 				0BBA2149233BA3C800810283 /* NetworkHelper.swift in Sources */,
 				0BBA214B233BA3E400810283 /* HoroscopeAPIManager.swift in Sources */,
 				0BBA2125233ABA4600810283 /* AppDelegate.swift in Sources */,
