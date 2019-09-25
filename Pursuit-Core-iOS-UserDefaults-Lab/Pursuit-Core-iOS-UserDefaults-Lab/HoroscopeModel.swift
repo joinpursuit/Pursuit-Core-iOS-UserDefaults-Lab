@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct Horoscope: Codable {
+    
+    let sunsign: String
+    let horoscope: String
+}

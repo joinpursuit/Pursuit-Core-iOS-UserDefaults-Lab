@@ -14,6 +14,10 @@
 		0BBA212F233ABA4800810283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BBA212D233ABA4800810283 /* LaunchScreen.storyboard */; };
 		0BBA213A233ABA4800810283 /* Pursuit_Core_iOS_UserDefaults_LabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA2139233ABA4800810283 /* Pursuit_Core_iOS_UserDefaults_LabTests.swift */; };
 		0BBA2145233ABC0D00810283 /* HoroscopeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA2144233ABC0D00810283 /* HoroscopeModel.swift */; };
+		0BBA2147233BA3B700810283 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA2146233BA3B700810283 /* AppError.swift */; };
+		0BBA2149233BA3C800810283 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA2148233BA3C800810283 /* NetworkHelper.swift */; };
+		0BBA214B233BA3E400810283 /* HoroscopeAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA214A233BA3E400810283 /* HoroscopeAPIManager.swift */; };
+		0BBA214D233BA40700810283 /* HoroscopeWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA214C233BA40700810283 /* HoroscopeWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		0BBA2139233ABA4800810283 /* Pursuit_Core_iOS_UserDefaults_LabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pursuit_Core_iOS_UserDefaults_LabTests.swift; sourceTree = "<group>"; };
 		0BBA213B233ABA4800810283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BBA2144233ABC0D00810283 /* HoroscopeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeModel.swift; sourceTree = "<group>"; };
+		0BBA2146233BA3B700810283 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		0BBA2148233BA3C800810283 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		0BBA214A233BA3E400810283 /* HoroscopeAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeAPIManager.swift; sourceTree = "<group>"; };
+		0BBA214C233BA40700810283 /* HoroscopeWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,10 @@
 				0BBA2126233ABA4600810283 /* ViewController.swift */,
 				0BBA2128233ABA4600810283 /* Main.storyboard */,
 				0BBA2144233ABC0D00810283 /* HoroscopeModel.swift */,
+				0BBA2146233BA3B700810283 /* AppError.swift */,
+				0BBA2148233BA3C800810283 /* NetworkHelper.swift */,
+				0BBA214A233BA3E400810283 /* HoroscopeAPIManager.swift */,
+				0BBA214C233BA40700810283 /* HoroscopeWrapper.swift */,
 				0BBA212B233ABA4800810283 /* Assets.xcassets */,
 				0BBA212D233ABA4800810283 /* LaunchScreen.storyboard */,
 				0BBA2130233ABA4800810283 /* Info.plist */,
@@ -200,7 +212,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BBA2147233BA3B700810283 /* AppError.swift in Sources */,
+				0BBA214D233BA40700810283 /* HoroscopeWrapper.swift in Sources */,
 				0BBA2127233ABA4600810283 /* ViewController.swift in Sources */,
+				0BBA2149233BA3C800810283 /* NetworkHelper.swift in Sources */,
+				0BBA214B233BA3E400810283 /* HoroscopeAPIManager.swift in Sources */,
 				0BBA2125233ABA4600810283 /* AppDelegate.swift in Sources */,
 				0BBA2145233ABC0D00810283 /* HoroscopeModel.swift in Sources */,
 			);
