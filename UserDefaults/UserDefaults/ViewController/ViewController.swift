@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     private func loadDefaultSettings() {
         if let userBirthday = UserDefaultsWrapper.shared.getBirthday() {
             birthday = userBirthday
-            pushToNextController()
+//            pushToNextController()
         }
     }
 
