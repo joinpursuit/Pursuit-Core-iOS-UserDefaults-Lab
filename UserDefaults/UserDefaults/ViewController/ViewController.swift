@@ -42,18 +42,23 @@ class ViewController: UIViewController {
     func pushToNextController() {
         let storyboard = UIStoryboard.init(name: "Main", bundle:nil)
         let horoscopeDVC = storyboard.instantiateViewController(withIdentifier: "HoroscopeViewController") as! HoroscopeViewController
-        HoroscopeAPIHelper.shared.getHoroscope(sunSign: Horoscope.getSunSign(date:birthday)) { (result) in
+        DispatchQueue.global().async {
+            
+        
+            HoroscopeAPIHelper.shared.getHoroscope(sunSign: Horoscope.getSunSign(date:self.birthday)) { (result) in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let HoroscopesFromOnline):
                     horoscopeDVC.horoscope = HoroscopesFromOnline
+                    self.navigationController?.pushViewController(horoscopeDVC, animated: true)
+                   
+
                 case .failure(let error):
                     print(error)
                 }
             }
+            }
         }
-        
-        self.navigationController?.pushViewController(horoscopeDVC, animated: true)
     }
     
     
