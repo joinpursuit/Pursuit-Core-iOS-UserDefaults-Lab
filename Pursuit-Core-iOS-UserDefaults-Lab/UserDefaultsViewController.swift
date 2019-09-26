@@ -8,8 +8,9 @@
 
 import UIKit
 
-
 class UserDefaultsViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+     //let defaults = UserDefaults.standard
     
     @IBOutlet weak var SignPicker: UIPickerView!
     
@@ -19,9 +20,9 @@ class UserDefaultsViewController: UIViewController, UITextFieldDelegate, UIPicke
     
     @IBOutlet weak var NameLabel: UITextField!
     
-    @IBOutlet weak var signPickedLabel: UILabel!
-    
     @IBOutlet weak var birthdayPickedLabel: UILabel!
+    
+    @IBOutlet weak var signPickedLabel: UILabel!
     
     @IBAction func BirthdatePicker(_ sender: UIDatePicker) {
         
@@ -31,7 +32,7 @@ class UserDefaultsViewController: UIViewController, UITextFieldDelegate, UIPicke
         birthdayPickedLabel.text = strDate
     }
     
-    let defaults = UserDefaults.standard
+   
     
     var pickerData: [String] = [String]()
     
@@ -49,8 +50,23 @@ class UserDefaultsViewController: UIViewController, UITextFieldDelegate, UIPicke
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.signPickedLabel.text = pickerData[row]
+        sunSign = pickerData[row]
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let horoscopeVC = storyBoard.instantiateViewController(withIdentifier: "HoroscopeViewController") as! HoroscopeViewController
+        HoroscopeAPIManager.shared.getHoroscopes(showSign: sunSign) { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .failure(let error):
+                    print(error)
+                case .success(let horoscopes):
+                    horoscopeVC.horoscopes = horoscopes
+                    self.navigationController?.pushViewController(horoscopeVC, animated: true)
+                    
+                }
+            }
+        }
+        
     }
-    
     
     
     @IBAction func textField(_ sender: UITextField) {
@@ -87,7 +103,11 @@ class UserDefaultsViewController: UIViewController, UITextFieldDelegate, UIPicke
         pickerData = ["Capricorn", "Gemini", "Taurus", "Aries", "Libra", "Pisces", "Leo", "Virgo","Aquarius", "Cancer", "Scorpio", "Sagittarius"]
     }
     
-    
+    var birthday = "" {
+        didSet {
+            
+        }
+    }
     
     var userName = "" {
         didSet {
@@ -97,13 +117,20 @@ class UserDefaultsViewController: UIViewController, UITextFieldDelegate, UIPicke
         }
     }
     
-    
+    var sunSign = "" {
+        didSet{
+          UserDefaultsWrapper.manager.store(sunSign: sunSign)
+            
+        }
+        
+    }
     
     private func setInitialValuesFromUserDefaults(){
         if let storedUsername = UserDefaults.standard.value(forKey: "userName") as? String {
-            NameLabel.text = storedUsername
+            NameLabel.text = ""
             userName = storedUsername
         }
+            signPickedLabel.text = UserDefaultsWrapper.manager.getSunSign()
     }
 }
 

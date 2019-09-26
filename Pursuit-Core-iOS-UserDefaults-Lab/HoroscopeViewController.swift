@@ -10,6 +10,7 @@ import UIKit
 
 class HoroscopeViewController: UIViewController {
     
+    
     var horoscopes: Horoscope!
 
     @IBOutlet weak var HoroscopeTextView: UITextView!
@@ -35,7 +36,7 @@ class HoroscopeViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData(horoscopeSign: horoscopes.horoscope)
+        //loadData(horoscopeSign: horoscopes.horoscope)
         setUpLabels()
     }
 

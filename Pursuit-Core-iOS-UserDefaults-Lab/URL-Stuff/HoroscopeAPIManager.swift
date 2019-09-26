@@ -14,7 +14,7 @@ class HoroscopeAPIManager {
     
     func getHoroscopes(showSign: String, completionHandler: @escaping (Result<Horoscope, AppError>) -> Void){
         
-        let urlStr = "http://sandipbgt.com/theastrologer/api/horoscope/\(showSign)/today "
+        let urlStr = "http://sandipbgt.com/theastrologer/api/horoscope/\(showSign.lowercased())/today"
         
         guard let url = URL(string: urlStr) else {
             completionHandler(.failure(.badURL))

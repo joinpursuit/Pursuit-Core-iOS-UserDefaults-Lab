@@ -16,14 +16,30 @@ class UserDefaultsWrapper {
         UserDefaults.standard.set(userName, forKey: usernameKey)
         
     }
+
+    func store(sunSign: String){
+        UserDefaults.standard.set(sunSign, forKey: sunSignKey)
+    }
     
     func getUsername() -> String? {
         return UserDefaults.standard.value(forKey: usernameKey) as? String
     }
     
+    func getSunSign() -> String? {
+        return UserDefaults.standard.value(forKey: sunSignKey) as? String
+    }
+    
+    //func store()
+//    func getBirthday() -> String? {
+//        
+//    }
+//    
     
     private init() {}
     
     private let usernameKey = "userName"
   
+    private let sunSignKey = "sunSign"
+    
+    private let birthdayKey = "birthday"
 }
