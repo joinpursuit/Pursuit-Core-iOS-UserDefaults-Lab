@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+class UserDefaultsWrapper {
+
+    static let manager = UserDefaultsWrapper()
+    
+    func store(userName: String) {
+        UserDefaults.standard.set(userName, forKey: usernameKey)
+        
+    }
+    
+    func getUsername() -> String? {
+        return UserDefaults.standard.value(forKey: usernameKey) as? String
+    }
+    
+    
+    private init() {}
+    
+    private let usernameKey = "userName"
+  
+}
