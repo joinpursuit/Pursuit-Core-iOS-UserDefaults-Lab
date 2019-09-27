@@ -9,9 +9,7 @@
 import UIKit
 
 class UserDefaultsViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
-    
-     //let defaults = UserDefaults.standard
-    
+
     @IBOutlet weak var SignPicker: UIPickerView!
     
     @IBOutlet weak var welcomeLabel: UILabel!
@@ -31,8 +29,6 @@ class UserDefaultsViewController: UIViewController, UITextFieldDelegate, UIPicke
         let strDate = dateFormatter.string(from: BirthdatePicker.date)
         birthdayPickedLabel.text = strDate
     }
-    
-   
     
     var pickerData: [String] = [String]()
     
@@ -68,18 +64,10 @@ class UserDefaultsViewController: UIViewController, UITextFieldDelegate, UIPicke
         
     }
     
-    
     @IBAction func textField(_ sender: UITextField) {
     }
     
     func textField(_ textField:UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool{
-        //        if let text = textField.text,
-        //            let textRange = Range(range, in: text) {
-        //            let updatedText = text.replacingCharacters(in: textRange, with: string)
-        //            userName = updatedText
-        //        }
-        //        return true
-        
         guard let text = textField.text else {
             return false
         }
@@ -93,8 +81,6 @@ class UserDefaultsViewController: UIViewController, UITextFieldDelegate, UIPicke
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // self.NameLabel.text = ""
-        //welcomeLabel.text = "Welcome"
         NameLabel.delegate = self
         setInitialValuesFromUserDefaults()
         self.SignPicker.delegate = self
@@ -105,6 +91,9 @@ class UserDefaultsViewController: UIViewController, UITextFieldDelegate, UIPicke
     
     var birthday = "" {
         didSet {
+           //birthdayPickedLabel.text = strDate
+        //UserDefaultsWrapper.manager.store(birthDay: birthDay)
+            
             
         }
     }
@@ -133,4 +122,3 @@ class UserDefaultsViewController: UIViewController, UITextFieldDelegate, UIPicke
             signPickedLabel.text = UserDefaultsWrapper.manager.getSunSign()
     }
 }
-

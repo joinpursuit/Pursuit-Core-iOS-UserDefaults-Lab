@@ -29,11 +29,13 @@ class UserDefaultsWrapper {
         return UserDefaults.standard.value(forKey: sunSignKey) as? String
     }
     
-    //func store()
-//    func getBirthday() -> String? {
-//        
-//    }
-//    
+    func store(birthDay: Int){
+        UserDefaults.standard.set(birthDay, forKey: birthdayKey) as? Int
+    }
+    func getBirthday() -> Int? {
+        return UserDefaults.standard.value(forKey: birthdayKey) as? Int
+    }
+    
     
     private init() {}
     
