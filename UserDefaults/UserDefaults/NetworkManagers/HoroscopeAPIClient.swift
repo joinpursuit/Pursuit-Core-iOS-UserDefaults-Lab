@@ -32,7 +32,7 @@ struct  HoroscopeAPIHelper {
                     completionHandler(.success(horoscopeInfo))
                     
                 } catch {
-                    completionHandler(.failure(.noDataError))
+                    completionHandler(.failure(.badURL))
                 }
             }
         }

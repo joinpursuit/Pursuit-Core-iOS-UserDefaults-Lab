@@ -20,6 +20,7 @@
 		287E4148233AF87000C2A26D /* HoroscopeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E4147233AF87000C2A26D /* HoroscopeAPIClient.swift */; };
 		287E414A233AFD5300C2A26D /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E4149233AFD5300C2A26D /* DateExtention.swift */; };
 		287E414E233AFEC800C2A26D /* HoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E414D233AFEC800C2A26D /* HoroscopeViewController.swift */; };
+		287E41F1233FBD7400C2A26D /* GifData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E41F0233FBD7400C2A26D /* GifData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		287E4147233AF87000C2A26D /* HoroscopeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeAPIClient.swift; sourceTree = "<group>"; };
 		287E4149233AFD5300C2A26D /* DateExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtention.swift; sourceTree = "<group>"; };
 		287E414D233AFEC800C2A26D /* HoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeViewController.swift; sourceTree = "<group>"; };
+		287E41F0233FBD7400C2A26D /* GifData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				287E4149233AFD5300C2A26D /* DateExtention.swift */,
+				287E41F0233FBD7400C2A26D /* GifData.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				287E414E233AFEC800C2A26D /* HoroscopeViewController.swift in Sources */,
 				287E4122233A9F9300C2A26D /* ViewController.swift in Sources */,
 				287E4146233AF82600C2A26D /* AppError.swift in Sources */,
+				287E41F1233FBD7400C2A26D /* GifData.swift in Sources */,
 				287E4144233AF7B000C2A26D /* NetworkHelper.swift in Sources */,
 				287E4120233A9F9300C2A26D /* AppDelegate.swift in Sources */,
 				287E4140233AA71400C2A26D /* UserDefaults.swift in Sources */,

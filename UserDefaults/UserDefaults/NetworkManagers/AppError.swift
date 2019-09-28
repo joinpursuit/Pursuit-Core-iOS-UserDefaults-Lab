@@ -20,5 +20,6 @@ enum AppError: Error {
     case badImage
     case unauthorized // 403 and 401
     case thppppp
+    case notAnImage
     case other(rawError: String)
 }

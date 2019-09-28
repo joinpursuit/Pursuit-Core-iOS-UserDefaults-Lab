@@ -16,18 +16,16 @@ class HoroscopeViewController: UIViewController {
     var horoscope: Horoscope!
        
     
+    @IBOutlet weak var gifImage: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        addGif()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        loadData()
-//    }
-//    
+    
     func loadData() {
         if horoscope == nil {
             guard let birthday = UserDefaultsWrapper.shared.getBirthday() else {return}
@@ -48,6 +46,12 @@ class HoroscopeViewController: UIViewController {
             horoscopeInfo.text = horoscope.horoscope
             nameLabel.text = horoscope.sunsign
         }
+    }
+    
+    func addGif() {
+        
+        let gif = UIImage.gif(url: "https://media.giphy.com/media/cTraRt0bV7TzO/giphy.gif")
+        gifImage.image = gif
     }
 
 }
