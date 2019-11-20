@@ -9,10 +9,13 @@
 import UIKit
 
 class HoroscopeViewController: UIViewController {
-
+    
+    lazy var user: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view
+        
     }
 
 

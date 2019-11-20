@@ -11,6 +11,7 @@ import UIKit
 class SignupViewController: UIViewController {
     
     //MARK: - Properties
+
     
     lazy var userNameTextField: UITextField = {
         let textField = UITextField()
@@ -36,7 +37,15 @@ class SignupViewController: UIViewController {
         return label
     }()
     
-    // MARK:- Lifecycle Overrides
+    lazy var signUpButton: UIButton = {
+        let button = UIButton()
+        button.titleLabel?.text = "Sign Up"
+        button.backgroundColor = .systemBlue
+        button.addTarget(self, action: #selector(trySignUp), for: .touchUpInside)
+        return button
+    }()
+    
+    // MARK:- Lifecycle Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,12 +59,11 @@ class SignupViewController: UIViewController {
     private func configureView() {
         addUserNameTextField()
         addBirthMonthTextField()
-        adduserNameLabel()
+        addUserNameLabel()
         addBirthMonthLabel()
+        addSignUpButton()
     }
-    
-//    @objc func
-    
+        
     private func addUserNameTextField() {
         view.addSubview(userNameTextField)
         userNameTextField.translatesAutoresizingMaskIntoConstraints = false
@@ -74,7 +82,7 @@ class SignupViewController: UIViewController {
             birthMonthTextField.widthAnchor.constraint(equalTo: userNameTextField.widthAnchor)])
     }
     
-    private func adduserNameLabel() {
+    private func addUserNameLabel() {
         view.addSubview(userNameLabel)
         userNameLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -89,6 +97,23 @@ class SignupViewController: UIViewController {
             birthMonthLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 20),
             birthMonthLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8)])
     }
+    
+    private func addSignUpButton() {
+        view.addSubview(signUpButton)
+        signUpButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            signUpButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            signUpButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            signUpButton.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.5)])
+    }
+    
+    // MARK: - Objective C Methods
+    
+    @objc func trySignUp() {
+        
+    }
+    
+    //What i need to do.  Finish userdefaults.  create a user page, and asdfasdfee json.
     
 
     /*
