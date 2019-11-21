@@ -9,11 +9,7 @@
 import Foundation
 
 struct User {
-    let name: String?
-    let birthMonth: String?
+    var name: String
+    var birthMonth: String
     
-    init(name: String? = nil, birthMonth: String? = nil) {
-        self.name = name
-        self.birthMonth = birthMonth
-    }
 }

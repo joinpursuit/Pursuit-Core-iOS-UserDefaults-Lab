@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = scene
-        window?.rootViewController = SignupViewController()
+        window?.rootViewController = UINavigationController(rootViewController: HoroscopeViewController())
+//        window?.rootViewController = HoroscopeViewController()
         window?.makeKeyAndVisible()
         // Need to study window and scene delegates.
     }
