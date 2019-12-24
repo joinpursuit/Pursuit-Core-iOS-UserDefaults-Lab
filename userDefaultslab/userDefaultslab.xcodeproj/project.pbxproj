@@ -7,15 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E12C20AE2385E2E300C56336 /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12C20AD2385E2E300C56336 /* Month.swift */; };
-		E12C20B02385E3F100C56336 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12C20AF2385E3F100C56336 /* User.swift */; };
 		E150D8A023844D3A0097D016 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E150D89F23844D3A0097D016 /* AppDelegate.swift */; };
 		E150D8A223844D3A0097D016 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E150D8A123844D3A0097D016 /* SceneDelegate.swift */; };
-		E150D8A423844D3A0097D016 /* HoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E150D8A323844D3A0097D016 /* HoroscopeViewController.swift */; };
+		E150D8A423844D3A0097D016 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E150D8A323844D3A0097D016 /* ViewController.swift */; };
 		E150D8A923844D3E0097D016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E150D8A823844D3E0097D016 /* Assets.xcassets */; };
 		E150D8AC23844D3E0097D016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E150D8AA23844D3E0097D016 /* LaunchScreen.storyboard */; };
 		E150D8B723844D3E0097D016 /* userDefaultslabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E150D8B623844D3E0097D016 /* userDefaultslabTests.swift */; };
-		E150D8C223844D9D0097D016 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E150D8C123844D9D0097D016 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,19 +26,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E12C20AD2385E2E300C56336 /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
-		E12C20AF2385E3F100C56336 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E150D89C23844D3A0097D016 /* userDefaultslab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = userDefaultslab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E150D89F23844D3A0097D016 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E150D8A123844D3A0097D016 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E150D8A323844D3A0097D016 /* HoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeViewController.swift; sourceTree = "<group>"; };
+		E150D8A323844D3A0097D016 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E150D8A823844D3E0097D016 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E150D8AB23844D3E0097D016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E150D8AD23844D3E0097D016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E150D8B223844D3E0097D016 /* userDefaultslabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = userDefaultslabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E150D8B623844D3E0097D016 /* userDefaultslabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDefaultslabTests.swift; sourceTree = "<group>"; };
 		E150D8B823844D3E0097D016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E150D8C123844D9D0097D016 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +79,7 @@
 			children = (
 				E150D89F23844D3A0097D016 /* AppDelegate.swift */,
 				E150D8A123844D3A0097D016 /* SceneDelegate.swift */,
-				E150D8A323844D3A0097D016 /* HoroscopeViewController.swift */,
-				E150D8C123844D9D0097D016 /* SignupViewController.swift */,
-				E12C20AD2385E2E300C56336 /* Month.swift */,
-				E12C20AF2385E3F100C56336 /* User.swift */,
+				E150D8A323844D3A0097D016 /* ViewController.swift */,
 				E150D8A823844D3E0097D016 /* Assets.xcassets */,
 				E150D8AA23844D3E0097D016 /* LaunchScreen.storyboard */,
 				E150D8AD23844D3E0097D016 /* Info.plist */,
@@ -205,11 +196,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E150D8A423844D3A0097D016 /* HoroscopeViewController.swift in Sources */,
+				E150D8A423844D3A0097D016 /* ViewController.swift in Sources */,
 				E150D8A023844D3A0097D016 /* AppDelegate.swift in Sources */,
-				E12C20B02385E3F100C56336 /* User.swift in Sources */,
-				E150D8C223844D9D0097D016 /* SignupViewController.swift in Sources */,
-				E12C20AE2385E2E300C56336 /* Month.swift in Sources */,
 				E150D8A223844D3A0097D016 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
