@@ -20,6 +20,8 @@ class HoroscopeViewController: UIViewController {
     
     private lazy var textView: UITextView = {
         let textView = UITextView()
+        textView.font = .systemFont(ofSize: 20)
+        textView.isEditable = false
         return textView
     }()
     
@@ -33,7 +35,14 @@ class HoroscopeViewController: UIViewController {
         return button
     }()
     
-    private var horoscope: Horoscope!
+    private var horoscope: Horoscope! {
+        didSet {
+            textView.text = """
+            Hello \(UserDefaultsWrapper.helper.getUsername() ?? "Guest"),
+            \(horoscope.horoscope)
+            """
+        }
+    }
     
     private var endpointURL: String { "http://sandipbgt.com/theastrologer/api/horoscope/\(sign.rawValue)/today/"
     }
@@ -49,6 +58,7 @@ class HoroscopeViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemRed
         configureView()
+        loadData()
     }
     
     @objc private func buttonPressed(_ sender: UIButton) {
