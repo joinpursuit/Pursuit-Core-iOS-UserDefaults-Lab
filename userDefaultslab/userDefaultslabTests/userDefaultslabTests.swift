@@ -24,5 +24,24 @@ class userDefaultslabTests: XCTestCase {
         print(data)
         XCTAssert(data != nil, "Data should exist")
     }
+    
+    func testURLAGAIN() {
+        let urlString = "http://sandipbgt.com/theastrologer/api/horoscope/gemini/today/"
+        var horoscope = Horoscope(sunsign: "w", credit: "w", date: "w", horoscope: "w", meta: Meta(mood: "w", keywords: "w", intensity: "w"))
+        let exp = XCTestExpectation(description: "Succesfully decoded object")
+        
+        GenericCoderService.manager.getJSON(objectType: Horoscope.self, with: urlString) { (result) in
+            switch result {
+            case .failure(let error):
+                XCTFail("\(error)")
+            case .success(let horoscopeFromAPI):
+                horoscope = horoscopeFromAPI
+                exp.fulfill()
+                
+            }
+        }
+        
+        wait(for: [exp], timeout: 5)
+    }
 
 }

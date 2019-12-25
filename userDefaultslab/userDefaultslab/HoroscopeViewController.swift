@@ -23,15 +23,30 @@ class HoroscopeViewController: UIViewController {
         return textView
     }()
     
+    private lazy var editButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Edit", for: .normal)
+        button.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+        button.backgroundColor = .systemBlue
+        button.layer.cornerRadius = 5
+        button.clipsToBounds = true
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemRed
         configureView()
     }
     
+    @objc private func buttonPressed(_ sender: UIButton) {
+        present(ViewController(), animated: true, completion: nil)
+    }
+    
     private func configureView() {
         setupTitleLabel()
         setupTextView()
+        setupButton()
     }
     
     private func setupTitleLabel() {
@@ -53,5 +68,15 @@ class HoroscopeViewController: UIViewController {
             textView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             textView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             textView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)])
+    }
+    
+    private func setupButton() {
+        view.addSubview(editButton)
+        
+        editButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            editButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+            editButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            editButton.widthAnchor.constraint(equalToConstant: editButton.intrinsicContentSize.width + 20)])
     }
 }
