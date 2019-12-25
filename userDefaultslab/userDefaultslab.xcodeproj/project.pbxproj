@@ -83,8 +83,8 @@
 			children = (
 				E150D89F23844D3A0097D016 /* AppDelegate.swift */,
 				E150D8A123844D3A0097D016 /* SceneDelegate.swift */,
-				E150D8A323844D3A0097D016 /* ViewController.swift */,
 				0B4FD14223B34AB300351910 /* UserDefaultsWrapper.swift */,
+				E150D8A323844D3A0097D016 /* ViewController.swift */,
 				0B4FD14023B347A600351910 /* HoroscopeViewController.swift */,
 				E150D8A823844D3E0097D016 /* Assets.xcassets */,
 				E150D8AA23844D3E0097D016 /* LaunchScreen.storyboard */,

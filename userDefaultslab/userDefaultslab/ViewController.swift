@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         textField.borderStyle = .bezel
         textField.backgroundColor = .secondarySystemBackground
         textField.placeholder = "Enter your name.."
+        textField.text = UserDefaultsWrapper.helper.getUsername()
         textField.addTarget(self, action: #selector(validateField(_:)), for: .editingChanged)
         return textField
     }()
@@ -22,6 +23,9 @@ class ViewController: UIViewController {
     private lazy var datePicker: UIDatePicker = {
         let picker = UIDatePicker()
         picker.datePickerMode = .date
+        if let date = UserDefaultsWrapper.helper.getBirthDate() {
+            picker.date = date
+        }
         return picker
     }()
     
@@ -32,7 +36,6 @@ class ViewController: UIViewController {
         button.setTitle("Signup", for: .normal)
         button.setTitleColor(.systemGray, for: .disabled)
         button.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
-        button.isEnabled = false
         return button
     }()
     
@@ -49,6 +52,8 @@ class ViewController: UIViewController {
     @objc private func buttonPressed(_ sender: UIButton) {
         print(datePicker.date.description)
         print("Button pressed.")
+        UserDefaultsWrapper.helper.store(username: textField.text!)
+        UserDefaultsWrapper.helper.store(date: datePicker.date)
     }
     
     private func configureView() {
@@ -90,6 +95,7 @@ class ViewController: UIViewController {
     
     private func setupButton() {
         view.addSubview(button)
+        button.isEnabled = textField.hasText ? true : false
         button.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
