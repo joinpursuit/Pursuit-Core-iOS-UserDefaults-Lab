@@ -33,6 +33,18 @@ class HoroscopeViewController: UIViewController {
         return button
     }()
     
+    private var horoscope: Horoscope!
+    
+    private var endpointURL: String { "http://sandipbgt.com/theastrologer/api/horoscope/\(sign.rawValue)/today/"
+    }
+    
+    private var sign: Sign {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "LLdd"
+        let y = Int(dateFormatter.string(from: UserDefaultsWrapper.helper.getBirthDate()!)) ?? -1
+        return Sign.getSign(y)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemRed
@@ -41,6 +53,17 @@ class HoroscopeViewController: UIViewController {
     
     @objc private func buttonPressed(_ sender: UIButton) {
         present(ViewController(), animated: true, completion: nil)
+    }
+    
+    private func loadData() {
+        GenericCoderAPI.manager.getJSON(objectType: Horoscope.self, with: endpointURL) { result in
+            switch result {
+            case .failure(let error):
+                print("Error occured getting JSON in HoroscopeViewController: \(error)")
+            case .success(let horoscopeFromAPI):
+                self.horoscope = horoscopeFromAPI
+            }
+        }
     }
     
     private func configureView() {

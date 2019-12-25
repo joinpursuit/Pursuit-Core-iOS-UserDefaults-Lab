@@ -8,8 +8,8 @@
 
 import Foundation
 
-class GenericCoderService {
-    static let manager = GenericCoderService()
+class GenericCoderAPI {
+    static let manager = GenericCoderAPI()
     private init() {}
     
     func getJSON<T: Decodable>(objectType: T.Type, with urlString: String, completionHandler: @escaping (Result<T, AppError>) -> ()) {

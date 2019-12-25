@@ -30,7 +30,7 @@ class userDefaultslabTests: XCTestCase {
         var horoscope = Horoscope(sunsign: "w", credit: "w", date: "w", horoscope: "w", meta: Meta(mood: "w", keywords: "w", intensity: "w"))
         let exp = XCTestExpectation(description: "Succesfully decoded object")
         
-        GenericCoderService.manager.getJSON(objectType: Horoscope.self, with: urlString) { (result) in
+        GenericCoderAPI.manager.getJSON(objectType: Horoscope.self, with: urlString) { (result) in
             switch result {
             case .failure(let error):
                 XCTFail("\(error)")
@@ -42,6 +42,13 @@ class userDefaultslabTests: XCTestCase {
         }
         
         wait(for: [exp], timeout: 5)
+    }
+    
+    func testDateFormatter() {
+        let dateformat = DateFormatter()
+        dateformat.dateFormat = "LLdd"
+        let number = Int(dateformat.string(from: UserDefaultsWrapper.helper.getBirthDate()!)) ?? -1
+        print(dateformat.string(from: UserDefaultsWrapper.helper.getBirthDate()!))
     }
 
 }
