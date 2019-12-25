@@ -54,6 +54,16 @@ class ViewController: UIViewController {
         print("Button pressed.")
         UserDefaultsWrapper.helper.store(username: textField.text!)
         UserDefaultsWrapper.helper.store(date: datePicker.date)
+        
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+            let sceneDelegate = windowScene.delegate as? SceneDelegate,
+            let window = sceneDelegate.window
+            else {
+                return
+        }
+        
+        window.rootViewController = HoroscopeViewController()
+        
     }
     
     private func configureView() {

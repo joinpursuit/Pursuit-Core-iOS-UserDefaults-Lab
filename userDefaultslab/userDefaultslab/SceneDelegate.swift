@@ -27,7 +27,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         } else {
             window?.rootViewController = ViewController()
         }
-//        window?.rootViewController = HoroscopeViewController()
         window?.makeKeyAndVisible()
         // Need to study window and scene delegates.
     }
