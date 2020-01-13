@@ -47,13 +47,15 @@ class ViewController: UIViewController {
     
     @IBAction func viewHoroscopeButton(_ sender: UIButton) {
         let filteredData = horoscopeAllData.filter{$0.sunsign == currentHoroscope}.first!
-        horoscopeDataLabel.isEnabled = false
+        print(filteredData)
+        horoscopeDataLabel.isHidden = false
         horoscopeDataLabel.text = "Horoscope:\n\(filteredData.horoscope)\nMood:\(filteredData.meta.mood)\nKeywords:\(filteredData.meta.keywords)"
     }
 }
 
 extension ViewController: UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        currentHoroscope = horoscopesOnlineList[row]
         return horoscopesOnlineList[row]
     }
 }
@@ -66,5 +68,9 @@ extension ViewController: UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return horoscopesOnlineList.count
     }
+}
+
+extension ViewController: UITextFieldDelegate{
+    
 }
 
