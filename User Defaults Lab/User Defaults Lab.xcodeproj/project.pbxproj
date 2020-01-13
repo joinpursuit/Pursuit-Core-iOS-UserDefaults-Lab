@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F14E228223CD213500A1E6E1 /* UserPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E228123CD213500A1E6E1 /* UserPrefs.swift */; };
 		F16DBF0223CCF53E00FC537C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBF0123CCF53E00FC537C /* AppDelegate.swift */; };
 		F16DBF0423CCF53E00FC537C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBF0323CCF53E00FC537C /* SceneDelegate.swift */; };
 		F16DBF0623CCF53E00FC537C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBF0523CCF53E00FC537C /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F14E228123CD213500A1E6E1 /* UserPrefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPrefs.swift; sourceTree = "<group>"; };
 		F16DBEFE23CCF53E00FC537C /* User Defaults Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "User Defaults Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16DBF0123CCF53E00FC537C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F16DBF0323CCF53E00FC537C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F14E228023CD20E500A1E6E1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F16DBF0123CCF53E00FC537C /* AppDelegate.swift */,
+				F16DBF0323CCF53E00FC537C /* SceneDelegate.swift */,
+				F16DBF0A23CCF54200FC537C /* Assets.xcassets */,
+				F14E228123CD213500A1E6E1 /* UserPrefs.swift */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
 		F16DBEF523CCF53E00FC537C = {
 			isa = PBXGroup;
 			children = (
@@ -89,14 +102,12 @@
 		F16DBF0023CCF53E00FC537C /* User Defaults Lab */ = {
 			isa = PBXGroup;
 			children = (
+				F14E228023CD20E500A1E6E1 /* Support Files */,
 				F16DBF3123CD0F7000FC537C /* Extensions */,
 				F16DBF2523CCFEEC00FC537C /* Models */,
 				F16DBF2423CCFEE100FC537C /* Network Services */,
 				F16DBF2323CCFE8300FC537C /* Controllers */,
-				F16DBF0123CCF53E00FC537C /* AppDelegate.swift */,
-				F16DBF0323CCF53E00FC537C /* SceneDelegate.swift */,
 				F16DBF0723CCF53E00FC537C /* Main.storyboard */,
-				F16DBF0A23CCF54200FC537C /* Assets.xcassets */,
 				F16DBF0C23CCF54200FC537C /* LaunchScreen.storyboard */,
 				F16DBF0F23CCF54200FC537C /* Info.plist */,
 			);
@@ -254,6 +265,7 @@
 				F16DBF3323CD0FB400FC537C /* UIViewController+Extensions.swift in Sources */,
 				F16DBF2923CD029E00FC537C /* NetworkHelper.swift in Sources */,
 				F16DBF0223CCF53E00FC537C /* AppDelegate.swift in Sources */,
+				F14E228223CD213500A1E6E1 /* UserPrefs.swift in Sources */,
 				F16DBF0423CCF53E00FC537C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
