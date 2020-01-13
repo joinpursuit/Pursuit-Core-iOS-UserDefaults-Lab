@@ -14,7 +14,7 @@
 		F16DBF0B23CCF54200FC537C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F16DBF0A23CCF54200FC537C /* Assets.xcassets */; };
 		F16DBF0E23CCF54200FC537C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F16DBF0C23CCF54200FC537C /* LaunchScreen.storyboard */; };
 		F16DBF1923CCF54200FC537C /* User_Defaults_LabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBF1823CCF54200FC537C /* User_Defaults_LabTests.swift */; };
-		F16DBF2723CCFF9F00FC537C /* horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBF2623CCFF9F00FC537C /* horoscope.swift */; };
+		F16DBF2723CCFF9F00FC537C /* HoroscopeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBF2623CCFF9F00FC537C /* HoroscopeModel.swift */; };
 		F16DBF2923CD029E00FC537C /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBF2823CD029E00FC537C /* NetworkHelper.swift */; };
 		F16DBF2B23CD03E100FC537C /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBF2A23CD03E100FC537C /* AppError.swift */; };
 		F16DBF2E23CD060800FC537C /* HoroscopeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBF2D23CD060800FC537C /* HoroscopeAPIClient.swift */; };
@@ -42,7 +42,7 @@
 		F16DBF1423CCF54200FC537C /* User Defaults LabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "User Defaults LabTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16DBF1823CCF54200FC537C /* User_Defaults_LabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_Defaults_LabTests.swift; sourceTree = "<group>"; };
 		F16DBF1A23CCF54200FC537C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F16DBF2623CCFF9F00FC537C /* horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = horoscope.swift; sourceTree = "<group>"; };
+		F16DBF2623CCFF9F00FC537C /* HoroscopeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeModel.swift; sourceTree = "<group>"; };
 		F16DBF2823CD029E00FC537C /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		F16DBF2A23CD03E100FC537C /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		F16DBF2D23CD060800FC537C /* HoroscopeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeAPIClient.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 		F16DBF2523CCFEEC00FC537C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F16DBF2623CCFF9F00FC537C /* horoscope.swift */,
+				F16DBF2623CCFF9F00FC537C /* HoroscopeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -236,7 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F16DBF2723CCFF9F00FC537C /* horoscope.swift in Sources */,
+				F16DBF2723CCFF9F00FC537C /* HoroscopeModel.swift in Sources */,
 				F16DBF2E23CD060800FC537C /* HoroscopeAPIClient.swift in Sources */,
 				F16DBF0623CCF53E00FC537C /* ViewController.swift in Sources */,
 				F16DBF2B23CD03E100FC537C /* AppError.swift in Sources */,
