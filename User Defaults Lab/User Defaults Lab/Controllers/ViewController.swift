@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         loadData()
         pickerViewDelegateOrDataSources()
+        textViewDelegateOrDataSources()
         currentHoroscope = horoscopesOnlineList.first
         horoscopeDataLabel.isHidden = true
     }
@@ -45,9 +46,18 @@ class ViewController: UIViewController {
         horoscopePicker.delegate = self
     }
     
+    func textViewDelegateOrDataSources(){
+        nameTextField.delegate = self
+    }
+    
+    func labelUpdated(){
+        let name = nameTextField.text ?? ""
+        outputNameLabel.text! = "Name:\n\(name)"
+    }
+    
     @IBAction func viewHoroscopeButton(_ sender: UIButton) {
         let filteredData = horoscopeAllData.filter{$0.sunsign == currentHoroscope}.first!
-        print(filteredData)
+        //print(filteredData)
         horoscopeDataLabel.isHidden = false
         horoscopeDataLabel.text = "Horoscope:\n\(filteredData.horoscope)\nMood:\(filteredData.meta.mood)\nKeywords:\(filteredData.meta.keywords)"
     }
@@ -71,6 +81,10 @@ extension ViewController: UIPickerViewDataSource{
 }
 
 extension ViewController: UITextFieldDelegate{
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        labelUpdated()
+        textField.resignFirstResponder()
+        return true
+    }
 }
-
