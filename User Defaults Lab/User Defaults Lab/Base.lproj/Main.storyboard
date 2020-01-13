@@ -121,7 +121,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="s5f-FA-QeP"/>
                     <connections>
+                        <outlet property="horoscopeDataLabel" destination="xVw-uc-eYQ" id="Hdh-jj-bFO"/>
                         <outlet property="horoscopePicker" destination="bAq-Vp-ZBX" id="PLo-A8-pSA"/>
+                        <outlet property="nameTextField" destination="J7b-Ea-6RG" id="G5p-SC-kVI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

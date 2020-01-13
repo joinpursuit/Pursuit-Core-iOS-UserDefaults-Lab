@@ -9,7 +9,7 @@
 import Foundation
 
 struct HoroscopeAPIClient {
-    static func getHoroscope (horoscope: String, completion: @escaping (Result<[HoroscopeSign], AppError>)->()){
+    static func getHoroscope (completion: @escaping (Result<[HoroscopeSign], AppError>)->()){
         let endPointUrl = "http://sandipbgt.com/theastrologer/api/horoscope/all/today"
         guard let url = URL(string: endPointUrl) else {
             completion(.failure(.badURL(endPointUrl)))
