@@ -17,5 +17,4 @@ struct HoroscopeSign: Decodable {
 struct MetaData: Decodable {
     let mood: String
     let keyword: String
-    let intensity: String
 }
