@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8DD324D323CD026D0065138E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD324D223CD026D0065138E /* AppDelegate.swift */; };
+		8DD324D523CD026D0065138E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD324D423CD026D0065138E /* SceneDelegate.swift */; };
+		8DD324D723CD026D0065138E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD324D623CD026D0065138E /* ViewController.swift */; };
+		8DD324DA23CD026D0065138E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DD324D823CD026D0065138E /* Main.storyboard */; };
+		8DD324DC23CD02700065138E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DD324DB23CD02700065138E /* Assets.xcassets */; };
+		8DD324DF23CD02700065138E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DD324DD23CD02700065138E /* LaunchScreen.storyboard */; };
+		8DD324EA23CD02700065138E /* HoroscopeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD324E923CD02700065138E /* HoroscopeAppTests.swift */; };
+		8DD324F523CD07A70065138E /* HoroscopeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD324F423CD07A70065138E /* HoroscopeTableViewController.swift */; };
+		8DD324F823CD08080065138E /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD324F723CD08080065138E /* NetworkHelper.swift */; };
+		8DD324FA23CD08190065138E /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD324F923CD08190065138E /* AppError.swift */; };
+		8DD324FC23CD08330065138E /* HoroscopeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD324FB23CD08330065138E /* HoroscopeAPIClient.swift */; };
+		8DD324FE23CD08440065138E /* HoroscopeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD324FD23CD08440065138E /* HoroscopeModel.swift */; };
+		8DD3250023CD1B3C0065138E /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD324FF23CD1B3C0065138E /* UserPreferences.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8DD324E623CD02700065138E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DD324C723CD026D0065138E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DD324CE23CD026D0065138E;
+			remoteInfo = HoroscopeApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8DD324CF23CD026D0065138E /* HoroscopeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoroscopeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DD324D223CD026D0065138E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8DD324D423CD026D0065138E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8DD324D623CD026D0065138E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8DD324D923CD026D0065138E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8DD324DB23CD02700065138E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8DD324DE23CD02700065138E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8DD324E023CD02700065138E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DD324E523CD02700065138E /* HoroscopeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoroscopeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DD324E923CD02700065138E /* HoroscopeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeAppTests.swift; sourceTree = "<group>"; };
+		8DD324EB23CD02700065138E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DD324F423CD07A70065138E /* HoroscopeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeTableViewController.swift; sourceTree = "<group>"; };
+		8DD324F723CD08080065138E /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		8DD324F923CD08190065138E /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		8DD324FB23CD08330065138E /* HoroscopeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeAPIClient.swift; sourceTree = "<group>"; };
+		8DD324FD23CD08440065138E /* HoroscopeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeModel.swift; sourceTree = "<group>"; };
+		8DD324FF23CD1B3C0065138E /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD324CC23CD026D0065138E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DD324E223CD02700065138E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8DD324C623CD026D0065138E = {
+			isa = PBXGroup;
+			children = (
+				8DD324F623CD07EA0065138E /* NetworkServices */,
+				8DD324D123CD026D0065138E /* HoroscopeApp */,
+				8DD324E823CD02700065138E /* HoroscopeAppTests */,
+				8DD324D023CD026D0065138E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8DD324D023CD026D0065138E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD324CF23CD026D0065138E /* HoroscopeApp.app */,
+				8DD324E523CD02700065138E /* HoroscopeAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8DD324D123CD026D0065138E /* HoroscopeApp */ = {
+			isa = PBXGroup;
+			children = (
+				8DD324D223CD026D0065138E /* AppDelegate.swift */,
+				8DD324D423CD026D0065138E /* SceneDelegate.swift */,
+				8DD324D623CD026D0065138E /* ViewController.swift */,
+				8DD324F423CD07A70065138E /* HoroscopeTableViewController.swift */,
+				8DD324D823CD026D0065138E /* Main.storyboard */,
+				8DD324DB23CD02700065138E /* Assets.xcassets */,
+				8DD324DD23CD02700065138E /* LaunchScreen.storyboard */,
+				8DD324E023CD02700065138E /* Info.plist */,
+				8DD324FF23CD1B3C0065138E /* UserPreferences.swift */,
+			);
+			path = HoroscopeApp;
+			sourceTree = "<group>";
+		};
+		8DD324E823CD02700065138E /* HoroscopeAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				8DD324E923CD02700065138E /* HoroscopeAppTests.swift */,
+				8DD324EB23CD02700065138E /* Info.plist */,
+			);
+			path = HoroscopeAppTests;
+			sourceTree = "<group>";
+		};
+		8DD324F623CD07EA0065138E /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				8DD324F723CD08080065138E /* NetworkHelper.swift */,
+				8DD324F923CD08190065138E /* AppError.swift */,
+				8DD324FB23CD08330065138E /* HoroscopeAPIClient.swift */,
+				8DD324FD23CD08440065138E /* HoroscopeModel.swift */,
+			);
+			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD324CE23CD026D0065138E /* HoroscopeApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DD324EE23CD02700065138E /* Build configuration list for PBXNativeTarget "HoroscopeApp" */;
+			buildPhases = (
+				8DD324CB23CD026D0065138E /* Sources */,
+				8DD324CC23CD026D0065138E /* Frameworks */,
+				8DD324CD23CD026D0065138E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HoroscopeApp;
+			productName = HoroscopeApp;
+			productReference = 8DD324CF23CD026D0065138E /* HoroscopeApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8DD324E423CD02700065138E /* HoroscopeAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DD324F123CD02700065138E /* Build configuration list for PBXNativeTarget "HoroscopeAppTests" */;
+			buildPhases = (
+				8DD324E123CD02700065138E /* Sources */,
+				8DD324E223CD02700065138E /* Frameworks */,
+				8DD324E323CD02700065138E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DD324E723CD02700065138E /* PBXTargetDependency */,
+			);
+			name = HoroscopeAppTests;
+			productName = HoroscopeAppTests;
+			productReference = 8DD324E523CD02700065138E /* HoroscopeAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8DD324C723CD026D0065138E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Luba Kaper";
+				TargetAttributes = {
+					8DD324CE23CD026D0065138E = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					8DD324E423CD02700065138E = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 8DD324CE23CD026D0065138E;
+					};
+				};
+			};
+			buildConfigurationList = 8DD324CA23CD026D0065138E /* Build configuration list for PBXProject "HoroscopeApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8DD324C623CD026D0065138E;
+			productRefGroup = 8DD324D023CD026D0065138E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD324CE23CD026D0065138E /* HoroscopeApp */,
+				8DD324E423CD02700065138E /* HoroscopeAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DD324CD23CD026D0065138E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD324DF23CD02700065138E /* LaunchScreen.storyboard in Resources */,
+				8DD324DC23CD02700065138E /* Assets.xcassets in Resources */,
+				8DD324DA23CD026D0065138E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DD324E323CD02700065138E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD324CB23CD026D0065138E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD324D723CD026D0065138E /* ViewController.swift in Sources */,
+				8DD324FC23CD08330065138E /* HoroscopeAPIClient.swift in Sources */,
+				8DD324FE23CD08440065138E /* HoroscopeModel.swift in Sources */,
+				8DD324D323CD026D0065138E /* AppDelegate.swift in Sources */,
+				8DD3250023CD1B3C0065138E /* UserPreferences.swift in Sources */,
+				8DD324FA23CD08190065138E /* AppError.swift in Sources */,
+				8DD324F823CD08080065138E /* NetworkHelper.swift in Sources */,
+				8DD324F523CD07A70065138E /* HoroscopeTableViewController.swift in Sources */,
+				8DD324D523CD026D0065138E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DD324E123CD02700065138E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD324EA23CD02700065138E /* HoroscopeAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8DD324E723CD02700065138E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DD324CE23CD026D0065138E /* HoroscopeApp */;
+			targetProxy = 8DD324E623CD02700065138E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8DD324D823CD026D0065138E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DD324D923CD026D0065138E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8DD324DD23CD02700065138E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DD324DE23CD02700065138E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8DD324EC23CD02700065138E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8DD324ED23CD02700065138E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8DD324EF23CD02700065138E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNV924Q9C2;
+				INFOPLIST_FILE = HoroscopeApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lubakaper.HoroscopeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8DD324F023CD02700065138E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNV924Q9C2;
+				INFOPLIST_FILE = HoroscopeApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lubakaper.HoroscopeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8DD324F223CD02700065138E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNV924Q9C2;
+				INFOPLIST_FILE = HoroscopeAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lubakaper.HoroscopeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoroscopeApp.app/HoroscopeApp";
+			};
+			name = Debug;
+		};
+		8DD324F323CD02700065138E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNV924Q9C2;
+				INFOPLIST_FILE = HoroscopeAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lubakaper.HoroscopeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoroscopeApp.app/HoroscopeApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8DD324CA23CD026D0065138E /* Build configuration list for PBXProject "HoroscopeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DD324EC23CD02700065138E /* Debug */,
+				8DD324ED23CD02700065138E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DD324EE23CD02700065138E /* Build configuration list for PBXNativeTarget "HoroscopeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DD324EF23CD02700065138E /* Debug */,
+				8DD324F023CD02700065138E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DD324F123CD02700065138E /* Build configuration list for PBXNativeTarget "HoroscopeAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DD324F223CD02700065138E /* Debug */,
+				8DD324F323CD02700065138E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8DD324C723CD026D0065138E /* Project object */;
+}
