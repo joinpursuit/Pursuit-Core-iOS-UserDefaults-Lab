@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var horoscopePicker: UIPickerView!
     @IBOutlet weak var horoscopeDataLabel: UILabel!
+    @IBOutlet weak var outputNameLabel: UILabel!
     
     private var horoscopesOnlineList = [String]()
     private var currentHoroscope:String?
@@ -24,6 +25,7 @@ class ViewController: UIViewController {
         loadData()
         pickerViewDelegateOrDataSources()
         currentHoroscope = horoscopesOnlineList.first
+        horoscopeDataLabel.isHidden = true
     }
     
     func loadData(){
@@ -44,9 +46,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func viewHoroscopeButton(_ sender: UIButton) {
-        
+        let filteredData = horoscopeAllData.filter{$0.sunsign == currentHoroscope}.first!
+        horoscopeDataLabel.isEnabled = false
+        horoscopeDataLabel.text = "Horoscope:\n\(filteredData.horoscope)\nMood:\(filteredData.meta.mood)\nKeywords:\(filteredData.meta.keywords)"
     }
-    
 }
 
 extension ViewController: UIPickerViewDelegate{
