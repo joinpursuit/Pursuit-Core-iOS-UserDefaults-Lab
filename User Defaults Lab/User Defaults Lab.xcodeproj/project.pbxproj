@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F14E228223CD213500A1E6E1 /* UserPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E228123CD213500A1E6E1 /* UserPrefs.swift */; };
+		F14E22BB23CE33AF00A1E6E1 /* BirthdayHoroscopes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E22BA23CE33AF00A1E6E1 /* BirthdayHoroscopes.swift */; };
+		F14E22BD23CE4D6B00A1E6E1 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E22BC23CE4D6B00A1E6E1 /* Date+Extensions.swift */; };
 		F16DBF0223CCF53E00FC537C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBF0123CCF53E00FC537C /* AppDelegate.swift */; };
 		F16DBF0423CCF53E00FC537C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBF0323CCF53E00FC537C /* SceneDelegate.swift */; };
 		F16DBF0623CCF53E00FC537C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DBF0523CCF53E00FC537C /* ViewController.swift */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		F14E228123CD213500A1E6E1 /* UserPrefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPrefs.swift; sourceTree = "<group>"; };
+		F14E22BA23CE33AF00A1E6E1 /* BirthdayHoroscopes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayHoroscopes.swift; sourceTree = "<group>"; };
+		F14E22BC23CE4D6B00A1E6E1 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		F16DBEFE23CCF53E00FC537C /* User Defaults Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "User Defaults Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16DBF0123CCF53E00FC537C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F16DBF0323CCF53E00FC537C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				F16DBF0523CCF53E00FC537C /* ViewController.swift */,
+				F14E22BA23CE33AF00A1E6E1 /* BirthdayHoroscopes.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				F16DBF3223CD0FB400FC537C /* UIViewController+Extensions.swift */,
+				F14E22BC23CE4D6B00A1E6E1 /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -259,6 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F16DBF2723CCFF9F00FC537C /* HoroscopeModel.swift in Sources */,
+				F14E22BD23CE4D6B00A1E6E1 /* Date+Extensions.swift in Sources */,
+				F14E22BB23CE33AF00A1E6E1 /* BirthdayHoroscopes.swift in Sources */,
 				F16DBF2E23CD060800FC537C /* HoroscopeAPIClient.swift in Sources */,
 				F16DBF0623CCF53E00FC537C /* ViewController.swift in Sources */,
 				F16DBF2B23CD03E100FC537C /* AppError.swift in Sources */,

@@ -32,8 +32,8 @@ class UserPreferences{
         standard.set(horoscope, forKey: UserPrefenceKey.horoscopes)
     }
     
-    func getHoroscope() -> String? {
-        guard let horoscope = standard.value(forKey: UserPrefenceKey.horoscopes) as? String else { return nil }
+    func getHoroscope() -> Int? {
+        guard let horoscope = standard.value(forKey: UserPrefenceKey.horoscopes) as? Int else { return nil }
         return horoscope
     }
 }

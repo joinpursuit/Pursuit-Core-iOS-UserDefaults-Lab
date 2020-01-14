@@ -15,21 +15,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var horoscopeDataLabel: UILabel!
     @IBOutlet weak var outputNameLabel: UILabel!
     
-    private var horoscopesOnlineList = [String]() {
+    private var horoscopesOnlineList = [String]()
+    {
         didSet {
             DispatchQueue.main.async {
                 self.horoscopePicker.selectRow(self.currentHoroscopeIndex ?? 2, inComponent: 0, animated: true)
             }
         }
     }
+    
     private var horoscopeAllData = [HoroscopeSign]()
     
-    private var currentHoroscopeIndex: Int? {
-        didSet{
-            //store data
-            UserPreferences.shared.storeHoroscope(with: currentHoroscopeIndex ?? 2)
-        }
-    }
+    private var currentHoroscopeIndex: Int?
+//    {
+//        didSet{
+//            //store data
+//            UserPreferences.shared.storeHoroscope(with: currentHoroscopeIndex ?? 2)
+//        }
+//    }
     private var currentHoroscope:String?
 
     private var name: String?{
@@ -49,6 +52,9 @@ class ViewController: UIViewController {
         textViewDelegateOrDataSources()
         //currentHoroscope = horoscopesOnlineList.first
         horoscopeDataLabel.isHidden = true
+        //self.horoscopePicker.selectRow(self.currentHoroscopeIndex ?? 2, inComponent: 0, animated: true)
+
+        print("Retrieve", currentHoroscopeIndex)
     }
     
     func loadData(){
@@ -68,7 +74,7 @@ class ViewController: UIViewController {
         }
         
         if let storedHoroscope = UserPreferences.shared.getHoroscope(){
-            currentHoroscope = storedHoroscope
+            currentHoroscopeIndex = storedHoroscope
         }
     }
     
@@ -94,6 +100,7 @@ class ViewController: UIViewController {
         horoscopeDataLabel.isHidden = false
         horoscopeDataLabel.text = "Horoscope:\n\(filteredData.horoscope)\nMood:\(filteredData.meta.mood)\nKeywords:\(filteredData.meta.keywords)"
         UserPreferences.shared.storeHoroscope(with: currentHoroscopeIndex ?? 2)
+        print("Store", currentHoroscopeIndex)
     }
 }
 
