@@ -10,7 +10,7 @@ import Foundation
 
 enum Sunsign: String{
     case aries = "aries"
-    case tauros = "tauros"
+    case tauros = "taurus"
     case gemini = "gemini"
     case cancer = "cancer"
     case leo = "leo"

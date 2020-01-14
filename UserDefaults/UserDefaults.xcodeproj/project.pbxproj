@@ -20,6 +20,8 @@
 		C43783CA23CD07E800B02D36 /* Horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43783C923CD07E800B02D36 /* Horoscope.swift */; };
 		C43783CD23CD1A0E00B02D36 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43783CC23CD1A0E00B02D36 /* UserPreferences.swift */; };
 		C43783CF23CD1D5600B02D36 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43783CE23CD1D5600B02D36 /* UserData.swift */; };
+		C43783D223CD21FC00B02D36 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43783D123CD21FC00B02D36 /* UIViewController+Extensions.swift */; };
+		C43783D423CD24A600B02D36 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43783D323CD24A600B02D36 /* SettingsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		C43783C923CD07E800B02D36 /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
 		C43783CC23CD1A0E00B02D36 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		C43783CE23CD1D5600B02D36 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		C43783D123CD21FC00B02D36 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		C43783D323CD24A600B02D36 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 		C437839A23CD03E300B02D36 /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
+				C43783D023CD21E400B02D36 /* Extensions */,
 				C43783CB23CD179600B02D36 /* UserDefaults */,
 				C43783C523CD073C00B02D36 /* Model */,
 				C43783C023CD044700B02D36 /* NetworkHelper */,
@@ -134,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				C437839F23CD03E300B02D36 /* ViewController.swift */,
+				C43783D323CD24A600B02D36 /* SettingsController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -163,6 +169,14 @@
 				C43783CC23CD1A0E00B02D36 /* UserPreferences.swift */,
 			);
 			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		C43783D023CD21E400B02D36 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C43783D123CD21FC00B02D36 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,8 +282,10 @@
 			files = (
 				C43783A023CD03E300B02D36 /* ViewController.swift in Sources */,
 				C43783CD23CD1A0E00B02D36 /* UserPreferences.swift in Sources */,
+				C43783D223CD21FC00B02D36 /* UIViewController+Extensions.swift in Sources */,
 				C43783CA23CD07E800B02D36 /* Horoscope.swift in Sources */,
 				C43783CF23CD1D5600B02D36 /* UserData.swift in Sources */,
+				C43783D423CD24A600B02D36 /* SettingsController.swift in Sources */,
 				C43783C223CD054C00B02D36 /* NetworkError.swift in Sources */,
 				C43783C423CD05A600B02D36 /* NetworkHelper.swift in Sources */,
 				C43783C723CD074E00B02D36 /* HoroscopeAPI.swift in Sources */,

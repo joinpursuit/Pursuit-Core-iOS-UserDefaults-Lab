@@ -43,46 +43,82 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="zLV-WG-LBl">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="r48-3N-Eyx"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="r48-3N-Eyx">
+                            <connections>
+                                <action selector="settingsButtonPressed:" destination="BYZ-38-t0r" id="LPs-vG-aXk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="greetingLabel" destination="UgS-su-4tm" id="ZWe-Jh-eYQ"/>
+                        <outlet property="horoscopeTextView" destination="aX3-Rj-xve" id="CPB-vz-q3z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings-->
         <scene sceneID="cG9-at-pGt">
             <objects>
-                <viewController id="CBJ-zx-ktn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsController" id="CBJ-zx-ktn" customClass="SettingsController" customModule="UserDefaults" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D88-Gf-22K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BFz-QR-WM3">
+                                <rect key="frame" x="0.0" y="243" width="414" height="619"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="signCell" id="1Jd-xN-OJZ">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Jd-xN-OJZ" id="oYV-Ee-g5n">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqS-nZ-P9E">
+                                <rect key="frame" x="20" y="108" width="374" height="61"/>
+                                <string key="text">Enter your name in the textField, and select a cell in the table that corresponds to your sun sign. Press back when you are done.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E73-s7-dbG">
-                                <rect key="frame" x="20" y="108" width="374" height="34"/>
+                                <rect key="frame" x="20" y="189" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BFz-QR-WM3">
-                                <rect key="frame" x="0.0" y="162" width="414" height="700"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="BFz-QR-WM3" firstAttribute="top" secondItem="E73-s7-dbG" secondAttribute="bottom" constant="20" id="8D8-Un-4V0"/>
+                            <constraint firstItem="BFz-QR-WM3" firstAttribute="top" secondItem="E73-s7-dbG" secondAttribute="bottom" constant="20" id="4E5-0m-kI7"/>
                             <constraint firstItem="3ap-wo-uGF" firstAttribute="trailing" secondItem="BFz-QR-WM3" secondAttribute="trailing" id="8IL-Rp-tEJ"/>
+                            <constraint firstItem="E73-s7-dbG" firstAttribute="top" secondItem="XqS-nZ-P9E" secondAttribute="bottom" constant="20" id="ERO-NW-7cN"/>
                             <constraint firstItem="3ap-wo-uGF" firstAttribute="trailing" secondItem="E73-s7-dbG" secondAttribute="trailing" constant="20" id="LHd-U2-fuu"/>
-                            <constraint firstItem="E73-s7-dbG" firstAttribute="top" secondItem="3ap-wo-uGF" secondAttribute="top" constant="20" id="RSQ-GU-sH1"/>
                             <constraint firstItem="BFz-QR-WM3" firstAttribute="leading" secondItem="3ap-wo-uGF" secondAttribute="leading" id="ZeE-Xh-7UK"/>
                             <constraint firstItem="E73-s7-dbG" firstAttribute="leading" secondItem="3ap-wo-uGF" secondAttribute="leading" constant="20" id="cLb-XE-Mht"/>
+                            <constraint firstItem="XqS-nZ-P9E" firstAttribute="leading" secondItem="3ap-wo-uGF" secondAttribute="leading" constant="20" id="f3M-R2-fRD"/>
+                            <constraint firstItem="XqS-nZ-P9E" firstAttribute="top" secondItem="3ap-wo-uGF" secondAttribute="top" constant="20" id="mej-WB-yiQ"/>
                             <constraint firstItem="3ap-wo-uGF" firstAttribute="bottom" secondItem="BFz-QR-WM3" secondAttribute="bottom" id="u42-sK-Ip3"/>
+                            <constraint firstItem="3ap-wo-uGF" firstAttribute="trailing" secondItem="XqS-nZ-P9E" secondAttribute="trailing" constant="20" id="w3B-6M-q0N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3ap-wo-uGF"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Xla-yG-pXO">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="xaJ-fc-H9b"/>
+                    <navigationItem key="navigationItem" title="Settings" id="Xla-yG-pXO">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="xaJ-fc-H9b">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="CBJ-zx-ktn" id="IwB-tt-52O"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="BFz-QR-WM3" id="Zoh-0B-s7k"/>
+                        <outlet property="textField" destination="E73-s7-dbG" id="5Jv-fT-CzZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h03-aL-XjE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
