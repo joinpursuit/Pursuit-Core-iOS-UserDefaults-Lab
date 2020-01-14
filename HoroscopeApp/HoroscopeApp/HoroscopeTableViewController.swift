@@ -25,11 +25,14 @@ class HoroscopeTableViewController: UITableViewController {
         super.viewDidLoad()
         signPicker.delegate = self
         signPicker.dataSource = self
-        
+       
 
     }
 
-   
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         UserPreference.shared.updateHoroscope(with: "leo")
+         
+    }
 }
 
 extension HoroscopeTableViewController: UIPickerViewDataSource {

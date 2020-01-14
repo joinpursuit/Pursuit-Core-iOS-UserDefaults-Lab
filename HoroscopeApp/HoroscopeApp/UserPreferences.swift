@@ -18,4 +18,18 @@ class UserPreference {
     
     static let shared = UserPreference()
     
+    func updateHoroscope(with horoscope: String) {
+        
+        UserDefaults.standard.set(horoscope, forKey: UserPreferenceKey.horoscopeText)
+    }
+    
+    func getHoroscope() -> String? {
+        guard let horoscope = UserDefaults.standard.object(forKey: UserPreferenceKey.horoscopeText) as? String else {
+            return nil
+        }
+        return horoscope
+    }
+    
+    
+    
 }
