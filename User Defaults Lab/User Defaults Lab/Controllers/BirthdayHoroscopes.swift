@@ -24,12 +24,12 @@ class BirthDayHoroscopesViewController: UIViewController {
     }
     
     func loadData(){
-        HoroscopeAPIClient.getHoroscope { (result) in
+        HoroscopeAPIClient.getHoroscope { [weak self] (result) in
             switch result{
             case .failure(let appError):
-                self.showAlert(title: "Network Error", message: "\(appError)")
+                self?.showAlert(title: "Network Error", message: "\(appError)")
             case .success(let horoscopeSigns):
-                self.allHoroScopeData = horoscopeSigns
+                self?.allHoroScopeData = horoscopeSigns
             }
         }
     }
@@ -63,8 +63,8 @@ class BirthDayHoroscopesViewController: UIViewController {
         let libra = fullDateFormatter.date(from: "\(yearString)/09/23")!...fullDateFormatter.date(from: "\(yearString)/10/22")!
         let scorpio = fullDateFormatter.date(from: "\(yearString)/10/23")!...fullDateFormatter.date(from: "\(yearString)/11/22")!
         let sagittarius = fullDateFormatter.date(from: "\(yearString)/11/22")!...fullDateFormatter.date(from: "\(yearString)/12/21")!
-        let capricorn = fullDateFormatter.date(from: "\(yearString)/12/22")!...fullDateFormatter.date(from: "\(String(yearInt!+1))/1/19")!
-        let aquarius = fullDateFormatter.date(from: "\(yearString)/01/20")!...fullDateFormatter.date(from: "\(yearString)/2/18")!
+        let capricorn = fullDateFormatter.date(from: "\(String(yearInt!-1))/12/22")!...fullDateFormatter.date(from: "\(yearString)/01/19")!
+        let aquarius = fullDateFormatter.date(from: "\(yearString)/01/20")!...fullDateFormatter.date(from: "\(yearString)/02/18")!
         let pisces = fullDateFormatter.date(from: "\(yearString)/02/22")!...fullDateFormatter.date(from: "\(yearString)/12/21")!
         
         //let ariesEval = selectedDateAsBirthDay.isBetween(aries)
@@ -72,29 +72,29 @@ class BirthDayHoroscopesViewController: UIViewController {
         
         switch selectedDateAsBirthDay {
         case aries:
-            horoscope = "aries"
+            horoscope = "Aries"
         case taurus:
-            horoscope = "taurus"
+            horoscope = "Taurus"
         case gemini:
-            horoscope = "gemini"
+            horoscope = "Gemini"
         case cancer:
-            horoscope = "cancer"
+            horoscope = "Cancer"
         case leo:
-            horoscope = "leo"
+            horoscope = "Leo"
         case virgo:
-            horoscope = "virgo"
+            horoscope = "Virgo"
         case libra:
-            horoscope = "libra"
+            horoscope = "Libra"
         case scorpio:
-            horoscope = "scorpio"
+            horoscope = "Scorpio"
         case sagittarius:
-            horoscope = "sagittarius"
+            horoscope = "Sagittarius"
         case capricorn:
-            horoscope = "capricorn"
+            horoscope = "Capricorn"
         case aquarius:
-            horoscope = "aquarius"
+            horoscope = "Aquarius"
         case pisces:
-            horoscope = "pisces"
+            horoscope = "Pisces"
         default:
             break
         }
@@ -117,7 +117,7 @@ class BirthDayHoroscopesViewController: UIViewController {
         let horoscope = getHoroscope()
         let filteredData = allHoroScopeData.filter{$0.sunsign == horoscope}.first!
         horoscopeInfoLabel.isHidden = false
-        horoscopeInfoLabel.text = "Horoscope:\n\(filteredData.horoscope)\nMood:\(filteredData.meta.mood)\nKeywords:\(filteredData.meta.keywords)"
+        horoscopeInfoLabel.text = "Horoscope:\(filteredData.sunsign)\nDescription:\n\(filteredData.horoscope)\nMood:\(filteredData.meta.mood)\nKeywords:\(filteredData.meta.keywords)"
     }
     
 }
