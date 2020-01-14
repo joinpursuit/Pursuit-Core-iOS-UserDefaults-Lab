@@ -11,11 +11,13 @@ import UIKit
 class SettingsController: UIViewController{
     
     @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var tableView: UITableView!
+    //@IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     var signs = ["aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces"]
     
     var selectedSign = false
+    var datePicked = false
     var userData = UserData(name: "", sign: .aries)
     
     override func viewDidLoad(){
@@ -25,16 +27,29 @@ class SettingsController: UIViewController{
     
     private func setUp(){
         textField.delegate = self
-        tableView.delegate = self
-        tableView.dataSource = self
+//        tableView.delegate = self
+//        tableView.dataSource = self
         navigationItem.leftBarButtonItem?.title = "back"
         navigationItem.leftBarButtonItem?.isEnabled = false
         textField.placeholder = "Enter your name here"
+        datePicker.date = Date()
+        datePicker.datePickerMode = .date
+        
     }
     
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem){
         UserPreferences.shared.saveHoroscope(using: userData)
         navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func datePickerChanged(_ sender: UIDatePicker){
+        datePicked = true
+        if let sign = DateHelper.dateToSign(DateHelper.dateToString(sender.date)){
+            userData.sign = sign
+        }
+        if datePicked && userData.name != ""{
+            navigationItem.leftBarButtonItem?.isEnabled = true
+        }
     }
     
 }
@@ -69,7 +84,7 @@ extension SettingsController: UITextFieldDelegate{
             return false
         }
         userData.name = text
-        if selectedSign && userData.name != ""{
+        if datePicked && userData.name != ""{
             navigationItem.leftBarButtonItem?.isEnabled = true
         }
         textField.resignFirstResponder()

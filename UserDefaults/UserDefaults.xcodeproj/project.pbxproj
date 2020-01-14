@@ -22,6 +22,7 @@
 		C43783CF23CD1D5600B02D36 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43783CE23CD1D5600B02D36 /* UserData.swift */; };
 		C43783D223CD21FC00B02D36 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43783D123CD21FC00B02D36 /* UIViewController+Extensions.swift */; };
 		C43783D423CD24A600B02D36 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43783D323CD24A600B02D36 /* SettingsController.swift */; };
+		C43783D623CD6E0900B02D36 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43783D523CD6E0900B02D36 /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		C43783CE23CD1D5600B02D36 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		C43783D123CD21FC00B02D36 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		C43783D323CD24A600B02D36 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		C43783D523CD6E0900B02D36 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		C43783BD23CD03F400B02D36 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C43783D523CD6E0900B02D36 /* DateHelper.swift */,
 				C437839B23CD03E300B02D36 /* AppDelegate.swift */,
 				C437839D23CD03E300B02D36 /* SceneDelegate.swift */,
 				C43783A423CD03E500B02D36 /* Assets.xcassets */,
@@ -289,6 +292,7 @@
 				C43783C223CD054C00B02D36 /* NetworkError.swift in Sources */,
 				C43783C423CD05A600B02D36 /* NetworkHelper.swift in Sources */,
 				C43783C723CD074E00B02D36 /* HoroscopeAPI.swift in Sources */,
+				C43783D623CD6E0900B02D36 /* DateHelper.swift in Sources */,
 				C437839C23CD03E300B02D36 /* AppDelegate.swift in Sources */,
 				C437839E23CD03E300B02D36 /* SceneDelegate.swift in Sources */,
 			);
