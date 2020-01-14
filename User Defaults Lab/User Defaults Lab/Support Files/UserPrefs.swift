@@ -11,6 +11,7 @@ import Foundation
 struct UserPrefenceKey {
     static let name = "Name"
     static let horoscopes = "Horoscopes"
+    static let dateOfBirth = "Date Of Birth"
 }
 
 class UserPreferences{
@@ -35,5 +36,14 @@ class UserPreferences{
     func getHoroscope() -> Int? {
         guard let horoscope = standard.value(forKey: UserPrefenceKey.horoscopes) as? Int else { return nil }
         return horoscope
+    }
+    
+    func storeDate(with date: Date){
+        standard.set(date, forKey: UserPrefenceKey.dateOfBirth)
+    }
+    
+    func getDate() -> Date?{
+        guard let date = standard.value(forKey: UserPrefenceKey.dateOfBirth) as? Date? else { return nil }
+        return date
     }
 }

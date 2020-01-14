@@ -32,6 +32,11 @@ class BirthDayHoroscopesViewController: UIViewController {
                 self?.allHoroScopeData = horoscopeSigns
             }
         }
+        
+        if let storedDOB = UserPreferences.shared.getDate(){
+            //dob = storedDOB
+            birthdayDatePicker.date = storedDOB
+        }
     }
     
     func getHoroscope() -> String{
@@ -55,11 +60,11 @@ class BirthDayHoroscopesViewController: UIViewController {
         
         //all possible horoscope ranges
         let aries = fullDateFormatter.date(from: "\(yearString)/03/21")!...fullDateFormatter.date(from: "\(yearString)/04/19")!
-        let taurus = fullDateFormatter.date(from: "\(yearString)/04/20")!...fullDateFormatter.date(from: "\(yearString)/5/20")!
-        let gemini = fullDateFormatter.date(from: "\(yearString)/05/21")!...fullDateFormatter.date(from: "\(yearString)/6/20")!
-        let cancer = fullDateFormatter.date(from: "\(yearString)/06/21")!...fullDateFormatter.date(from: "\(yearString)/7/22")!
-        let leo = fullDateFormatter.date(from: "\(yearString)/07/22")!...fullDateFormatter.date(from: "\(yearString)/8/22")!
-        let virgo = fullDateFormatter.date(from: "\(yearString)/08/23")!...fullDateFormatter.date(from: "\(yearString)/9/22")!
+        let taurus = fullDateFormatter.date(from: "\(yearString)/04/20")!...fullDateFormatter.date(from: "\(yearString)/05/20")!
+        let gemini = fullDateFormatter.date(from: "\(yearString)/05/21")!...fullDateFormatter.date(from: "\(yearString)/06/20")!
+        let cancer = fullDateFormatter.date(from: "\(yearString)/06/21")!...fullDateFormatter.date(from: "\(yearString)/07/22")!
+        let leo = fullDateFormatter.date(from: "\(yearString)/07/22")!...fullDateFormatter.date(from: "\(yearString)/08/22")!
+        let virgo = fullDateFormatter.date(from: "\(yearString)/08/23")!...fullDateFormatter.date(from: "\(yearString)/09/22")!
         let libra = fullDateFormatter.date(from: "\(yearString)/09/23")!...fullDateFormatter.date(from: "\(yearString)/10/22")!
         let scorpio = fullDateFormatter.date(from: "\(yearString)/10/23")!...fullDateFormatter.date(from: "\(yearString)/11/22")!
         let sagittarius = fullDateFormatter.date(from: "\(yearString)/11/22")!...fullDateFormatter.date(from: "\(yearString)/12/21")!
@@ -102,10 +107,10 @@ class BirthDayHoroscopesViewController: UIViewController {
         return horoscope
     }
     
-    func evaluateIfHoroscopeIsBetweenDateRange(dob date: Date, horoscope range: ClosedRange<Date>) -> Bool{
-        
-        return date.isBetween(range)
-    }
+//    func evaluateIfHoroscopeIsBetweenDateRange(dob date: Date, horoscope range: ClosedRange<Date>) -> Bool{
+//
+//        return date.isBetween(range)
+//    }
     
     @IBAction func datePickerChanged(_ sender: UIDatePicker) {
         dob = sender.date
@@ -118,6 +123,7 @@ class BirthDayHoroscopesViewController: UIViewController {
         let filteredData = allHoroScopeData.filter{$0.sunsign == horoscope}.first!
         horoscopeInfoLabel.isHidden = false
         horoscopeInfoLabel.text = "Horoscope:\(filteredData.sunsign)\nDescription:\n\(filteredData.horoscope)\nMood:\(filteredData.meta.mood)\nKeywords:\(filteredData.meta.keywords)"
+        UserPreferences.shared.storeDate(with: dob)
     }
     
 }
