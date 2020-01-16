@@ -27,12 +27,7 @@ class ViewController: UIViewController {
     private var horoscopeAllData = [HoroscopeSign]()
     
     private var currentHoroscopeIndex: Int?
-//    {
-//        didSet{
-//            //store data
-//            UserPreferences.shared.storeHoroscope(with: currentHoroscopeIndex ?? 2)
-//        }
-//    }
+
     private var currentHoroscope:String?
 
     private var name: String?{
@@ -40,7 +35,7 @@ class ViewController: UIViewController {
             //update UI
             outputNameLabel.text! = "Name:\n\(name ?? "")"
             //store data
-            UserPreferences.shared.storeName(with: name ?? "")
+            UserPreferences.shared.store(with: name!, UserPrefKey: UserPrefenceKey.name)
         }
     }
         
@@ -52,8 +47,7 @@ class ViewController: UIViewController {
         textViewDelegateOrDataSources()
         //currentHoroscope = horoscopesOnlineList.first
         horoscopeDataLabel.isHidden = true
-        //self.horoscopePicker.selectRow(self.currentHoroscopeIndex ?? 2, inComponent: 0, animated: true)
-
+        self.horoscopePicker.selectRow(self.currentHoroscopeIndex ?? 2, inComponent: 0, animated: true)
         print("Retrieve", currentHoroscopeIndex)
     }
     
@@ -69,11 +63,11 @@ class ViewController: UIViewController {
         }
         
         //getting stored data
-        if let storedName = UserPreferences.shared.getName(){
+        if let storedName: String = UserPreferences.shared.get(UserPrefKey: UserPrefenceKey.name) {
             name = storedName
         }
         
-        if let storedHoroscope = UserPreferences.shared.getHoroscope(){
+        if let storedHoroscope: Int = UserPreferences.shared.get(UserPrefKey: UserPrefenceKey.horoscopes){
             currentHoroscopeIndex = storedHoroscope
         }
     }
@@ -90,25 +84,27 @@ class ViewController: UIViewController {
     func labelUpdated(){
         name = nameTextField.text ?? ""
         //store name
-        UserPreferences.shared.storeName(with: name ?? "")
+        UserPreferences.shared.store(with: name!, UserPrefKey: UserPrefenceKey.name)
         outputNameLabel.text! = "Name:\n\(name ?? "")"
     }
     
     @IBAction func viewHoroscopeButton(_ sender: UIButton) {
         let filteredData = horoscopeAllData.filter{$0.sunsign == currentHoroscope}.first!
-        //print(filteredData)
         horoscopeDataLabel.isHidden = false
         horoscopeDataLabel.text = "Horoscope:\n\(filteredData.horoscope)\nMood:\(filteredData.meta.mood)\nKeywords:\(filteredData.meta.keywords)"
-        UserPreferences.shared.storeHoroscope(with: currentHoroscopeIndex ?? 2)
-        print("Store", currentHoroscopeIndex)
+        UserPreferences.shared.store(with: currentHoroscopeIndex!, UserPrefKey: UserPrefenceKey.horoscopes)
+        //print("Store", currentHoroscopeIndex)
     }
 }
 
 extension ViewController: UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         currentHoroscope = horoscopesOnlineList[row]
-        currentHoroscopeIndex = row
         return horoscopesOnlineList[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        currentHoroscopeIndex = row
     }
 }
 

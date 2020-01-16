@@ -33,8 +33,7 @@ class BirthDayHoroscopesViewController: UIViewController {
             }
         }
         
-        if let storedDOB = UserPreferences.shared.getDate(){
-            //dob = storedDOB
+        if let storedDOB: Date = UserPreferences.shared.get(UserPrefKey: UserPrefenceKey.dateOfBirth){
             birthdayDatePicker.date = storedDOB
         }
     }
@@ -71,9 +70,6 @@ class BirthDayHoroscopesViewController: UIViewController {
         let capricorn = fullDateFormatter.date(from: "\(String(yearInt!-1))/12/22")!...fullDateFormatter.date(from: "\(yearString)/01/19")!
         let aquarius = fullDateFormatter.date(from: "\(yearString)/01/20")!...fullDateFormatter.date(from: "\(yearString)/02/18")!
         let pisces = fullDateFormatter.date(from: "\(yearString)/02/22")!...fullDateFormatter.date(from: "\(yearString)/12/21")!
-        
-        //let ariesEval = selectedDateAsBirthDay.isBetween(aries)
-        
         
         switch selectedDateAsBirthDay {
         case aries:
@@ -123,7 +119,7 @@ class BirthDayHoroscopesViewController: UIViewController {
         let filteredData = allHoroScopeData.filter{$0.sunsign == horoscope}.first!
         horoscopeInfoLabel.isHidden = false
         horoscopeInfoLabel.text = "Horoscope:\(filteredData.sunsign)\nDescription:\n\(filteredData.horoscope)\nMood:\(filteredData.meta.mood)\nKeywords:\(filteredData.meta.keywords)"
-        UserPreferences.shared.storeDate(with: dob)
+        UserPreferences.shared.store(with: dob, UserPrefKey: UserPrefenceKey.dateOfBirth)
     }
     
 }
