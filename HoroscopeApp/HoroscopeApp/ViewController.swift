@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         }
         signLabel.text = enterdSign.text
         nameLabel.text = enteredName.name
-        getHoroscope(sign: signLabel.text ?? "Leo")
+        getHoroscope(sign: signLabel.text?.lowercased() ?? "Leo")
         
         
     }
