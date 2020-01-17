@@ -23,11 +23,14 @@ class ViewController: UIViewController {
     var currentName = "Luba"  {
         didSet {
             nameLabel.text = currentName
-            
-            UserPreference.shared.updateName(with: currentName)
         }
     }
     
+    var currentSign = "leo" {
+        didSet {
+            signLabel.text = currentSign
+        }
+    }
     
     var horoscope: Horoscope? {
         didSet {
@@ -41,8 +44,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getHoroscope(sign:  "leo")
-        horoscopeText.text = horoscope?.horoscope
+       // getHoroscope(sign:  currentSign)
+       // horoscopeText.text = horoscope?.horoscope
         updateUI()
     }
     
@@ -51,6 +54,10 @@ class ViewController: UIViewController {
         if let userName = UserPreference.shared.getName() {
             currentName = userName
         }
+        if let userSign = UserPreference.shared.getSign() {
+            currentSign = userSign
+        }
+    
     }
     
     @IBAction func addUserInfo(segue: UIStoryboardSegue) {
@@ -62,6 +69,11 @@ class ViewController: UIViewController {
         nameLabel.text = enteredName.name
         getHoroscope(sign: signLabel.text?.lowercased() ?? "Leo")
         
+        
+        // SAVE DEFAULTS
+        UserPreference.shared.updateName(with: enteredName.name)
+        UserPreference.shared.updateSign(with: enterdSign.text ?? "leo")
+        UserPreference.shared.updateHoroscope(with: horoscopeText.text)
         
     }
     
