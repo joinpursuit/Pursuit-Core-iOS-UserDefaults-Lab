@@ -11,6 +11,7 @@ import Foundation
 struct UserPreferenceKey {
     static let horoscopeText = "Horoscope Text"
     static let userName = "Name"
+    static let userSign = "Sign"
 }
 class UserPreference {
     
@@ -30,6 +31,24 @@ class UserPreference {
         return horoscope
     }
     
+    func updateName(with name: String) {
+        UserDefaults.standard.set(name, forKey: UserPreferenceKey.userName)
+    }
     
+    func getName() -> String? {
+        guard let name = UserDefaults.standard.object(forKey: UserPreferenceKey.userName) as? String else {
+            return nil
+        }
+        return name
+    }
+    func updateSign(with sign: String) {
+        UserDefaults.standard.set(sign, forKey: UserPreferenceKey.userSign)
+    }
     
+    func getSign() -> String? {
+        guard let sign = UserDefaults.standard.object(forKey: UserPreferenceKey.userSign) as? String else {
+            return nil
+        }
+        return sign
+    }
 }

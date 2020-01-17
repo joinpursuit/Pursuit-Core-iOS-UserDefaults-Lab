@@ -32,12 +32,12 @@ class HoroscopeTableViewController: UITableViewController {
         signPicker.dataSource = self
         nameTextField.delegate = self
         name = UserName(name: "LUBA")
-       
+        
     }
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         UserPreference.shared.updateHoroscope(with: "leo")
-         
+        UserPreference.shared.updateHoroscope(with: "leo")
+        
     }
 }
 
