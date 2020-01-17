@@ -41,8 +41,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //getHoroscope(sign: signLabel.text?.lowercased() ?? "leo")
-        //horoscopeText.text = horoscope?.horoscope
+        getHoroscope(sign:  "leo")
+        horoscopeText.text = horoscope?.horoscope
         updateUI()
     }
     
@@ -60,6 +60,7 @@ class ViewController: UIViewController {
         }
         signLabel.text = enterdSign.text
         nameLabel.text = enteredName.name
+        getHoroscope(sign: signLabel.text ?? "Leo")
         
         
     }
