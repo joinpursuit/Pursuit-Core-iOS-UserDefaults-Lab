@@ -17,7 +17,12 @@ class HoroscopeTableViewController: UITableViewController {
     @IBOutlet weak var signPicker: UIPickerView!
     
     
-    // dat for pickerView
+    @IBOutlet weak var signLabel: UILabel!
+    
+    var name: UserName?
+    
+    
+    // data for pickerView
     private let signs = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
     
     
@@ -25,8 +30,9 @@ class HoroscopeTableViewController: UITableViewController {
         super.viewDidLoad()
         signPicker.delegate = self
         signPicker.dataSource = self
+        nameTextField.delegate = self
+        name = UserName(name: "LUBA")
        
-
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -47,5 +53,22 @@ extension HoroscopeTableViewController: UIPickerViewDataSource {
 extension HoroscopeTableViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return signs[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        signLabel.text = signs[row]
+    }
+}
+
+extension HoroscopeTableViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // dismisses keyboard
+        textField.resignFirstResponder()
+        
+        name?.name = textField.text ?? "no user name"
+        
+        return true
+        
     }
 }

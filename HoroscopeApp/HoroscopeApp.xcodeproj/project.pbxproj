@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D71310E23D132110095C75E /* UserName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D71310D23D132110095C75E /* UserName.swift */; };
 		8DD324D323CD026D0065138E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD324D223CD026D0065138E /* AppDelegate.swift */; };
 		8DD324D523CD026D0065138E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD324D423CD026D0065138E /* SceneDelegate.swift */; };
 		8DD324D723CD026D0065138E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD324D623CD026D0065138E /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D71310D23D132110095C75E /* UserName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserName.swift; sourceTree = "<group>"; };
 		8DD324CF23CD026D0065138E /* HoroscopeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoroscopeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD324D223CD026D0065138E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DD324D423CD026D0065138E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				8DD324DD23CD02700065138E /* LaunchScreen.storyboard */,
 				8DD324E023CD02700065138E /* Info.plist */,
 				8DD324FF23CD1B3C0065138E /* UserPreferences.swift */,
+				8D71310D23D132110095C75E /* UserName.swift */,
 			);
 			path = HoroscopeApp;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				8DD324D723CD026D0065138E /* ViewController.swift in Sources */,
 				8DD324FC23CD08330065138E /* HoroscopeAPIClient.swift in Sources */,
 				8DD324FE23CD08440065138E /* HoroscopeModel.swift in Sources */,
+				8D71310E23D132110095C75E /* UserName.swift in Sources */,
 				8DD324D323CD026D0065138E /* AppDelegate.swift in Sources */,
 				8DD3250023CD1B3C0065138E /* UserPreferences.swift in Sources */,
 				8DD324FA23CD08190065138E /* AppError.swift in Sources */,
